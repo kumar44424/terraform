@@ -1,6 +1,6 @@
 {
-   "name": "Node.js on a Single VM on IBM Cloud",
-   "description": "Node.js - An execution environment for event-driven server-side applications.",
+   "name": "Single VM on IBM Cloud",
+   "description": "Single VM on IBM Cloud",
    "version": "1.0",
    "imageUrl": "./assets/svg/IBM_WebSphere_Standalone.svg",
    "image": "tp_WAS_standalone.png",
@@ -8,7 +8,7 @@
    "status": "active",
    "manifest": {
      "template_type": "Terraform",
-     "template_format": "HCL",
+     "template_format": "IBM",
      "template_provider": "IBM",
      "template": {
        "templateData": "",
@@ -23,9 +23,9 @@
      }
    },
    "metadata": {
-     "displayName": "Node.js on a Single VM",
+     "displayName": "Single VM",
      "providerDisplayName": "IBM",
-     "longDescription": "Deploys a single node of Node.js in IBM Cloud for development use, where Node.js is an execution environment for event-driven server-side and networking applications.",
+     "longDescription": "Deploys a single node in IBM Cloud.",
      "bullets": [
        {
          "title": "Clouds",
@@ -37,11 +37,7 @@
        },
        {
          "title": "Topology",
-         "description": "IBM Cloud: 1 virtual machine: Node.js"
-       },
-       {
-         "title": "Software deployed",
-         "description": "<ol class=\"list-numbering\"><li>Node.js: an execution environment for event-driven server-side and networking applications</li></ol>"
+         "description": "IBM Cloud: 1 virtual machine"
        },
        {
          "title": "Default virtual machine settings",
