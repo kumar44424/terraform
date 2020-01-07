@@ -42,10 +42,6 @@
        {
          "title": "Default virtual machine settings",
          "description": "<ul><li>IBM Cloud:<ul style=\"margin-left: 20px;\"><li>Flavor: Cores = 1, Memory = 1GB, Storage = 25GB SAN</li><li>Network: Private IP - Computed, Public IP - Computed</li><li>Firewall: Not enabled</li></ul></li></ul>"
-       },
-       {
-         "title": "Usage and special notes",
-         "description": "<ol class=\"list-numbering\"><li>Downloads latest releases of software.</li><li>Deployment takes approximately 5 minutes to complete.</li><li>To access the application and virtual machines, please see the instructions in the output log.</li><li>More details of software can be found in <a href=\"https://nodejs.org/en/\">https://nodejs.org/en/</a>.</li></ol>"
        }
      ],
      "featuredImageUrl": "https://ibmpatternengine-staticcontent-prod.eu-gb.mybluemix.net/ic_patternengine_50.png",
