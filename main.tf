@@ -118,7 +118,7 @@ resource "ibm_compute_vm_instance" "softlayer_virtual_guest" {
 #EOF
 
 #    destination = "/tmp/installation.sh"
-#  }
+}
 
   # Execute the script remotely
 #  provisioner "remote-exec" {
