@@ -97,36 +97,36 @@ resource "ibm_compute_vm_instance" "softlayer_virtual_guest" {
   }
 
   # Create the installation script
-  provisioner "file" {
-    content = <<EOF
+  #provisioner "file" {
+  #  content = <<EOF
 #!/bin/bash
 
-set -o errexit
-set -o nounset
-set -o pipefail
+#set -o errexit
+#set -o nounset
+#set -o pipefail
 
-LOGFILE="/var/log/install_nodejs.log"
+#LOGFILE="/var/log/install_nodejs.log"
 
-echo "---start installing node.js---" | tee -a $LOGFILE 2>&1
+#echo "---start installing node.js---" | tee -a $LOGFILE 2>&1
 
-yum install gcc-c++ make -y                                                        >> $LOGFILE 2>&1 || { echo "---Failed to install build tools---" | tee -a $LOGFILE; exit 1; }
-curl -sL https://rpm.nodesource.com/setup_7.x | bash -                             >> $LOGFILE 2>&1 || { echo "---Failed to install the NodeSource Node.js 7.x repo---" | tee -a $LOGFILE; exit 1; }
-yum install nodejs -y                                                              >> $LOGFILE 2>&1 || { echo "---Failed to install node.js---"| tee -a $LOGFILE; exit 1; }
+#yum install gcc-c++ make -y                                                        >> $LOGFILE 2>&1 || { echo "---Failed to install build tools---" | tee -a $LOGFILE; exit 1; }
+#curl -sL https://rpm.nodesource.com/setup_7.x | bash -                             >> $LOGFILE 2>&1 || { echo "---Failed to install the NodeSource Node.js 7.x repo---" | tee -a $LOGFILE; exit 1; }
+#yum install nodejs -y                                                              >> $LOGFILE 2>&1 || { echo "---Failed to install node.js---"| tee -a $LOGFILE; exit 1; }
 
-echo "---finish installing node.js---" | tee -a $LOGFILE 2>&1
+#echo "---finish installing node.js---" | tee -a $LOGFILE 2>&1
 
-EOF
+#EOF
 
-    destination = "/tmp/installation.sh"
-  }
+#    destination = "/tmp/installation.sh"
+#  }
 
   # Execute the script remotely
-  provisioner "remote-exec" {
-    inline = [
-      "chmod +x /tmp/installation.sh; bash /tmp/installation.sh",
-    ]
-  }
-}
+#  provisioner "remote-exec" {
+#   inline = [
+#      "chmod +x /tmp/installation.sh; bash /tmp/installation.sh",
+#    ]
+#  }
+#}
 
 #########################################################
 # Output
